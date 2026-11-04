@@ -30,6 +30,7 @@ jobs:
           port: 21
           server-dir: /public_html/
           timeout: 60000
+          dangerous-clean-slate: false
           # Glob patterns — folders must end with /** to match contents
           exclude: |
             **/.git/**
