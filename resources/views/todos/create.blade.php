@@ -12,7 +12,7 @@
             <a href="{{ route('todos.index') }}"
                class="inline-flex items-center gap-1.5 text-xs font-medium mb-4 transition-colors duration-150"
                style="color: #6b6b6b;"
-               onmouseover="this.style.color='#e11d48'"
+               onmouseover="this.style.color='#7c3aed'"
                onmouseout="this.style.color='#6b6b6b'">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
@@ -21,7 +21,7 @@
             </a>
 
             <div class="flex items-center gap-3">
-                <div class="w-1 h-7 rounded-full" style="background: linear-gradient(180deg, #e11d48, #9f1239);"></div>
+                <div class="w-1 h-7 rounded-full" style="background: linear-gradient(180deg, #7c3aed, #4c1d95);"></div>
                 <h1 class="text-2xl font-bold text-white">
                     Tambah Tugas
                 </h1>
@@ -38,7 +38,7 @@
             <!-- Judul -->
             <div>
                 <label for="title" class="block text-sm font-semibold mb-2" style="color: #d4d4d4;">
-                    Judul Tugas <span style="color: #e11d48;">*</span>
+                    Judul Tugas <span style="color: #a78bfa;">*</span>
                 </label>
 
                 <input
@@ -51,11 +51,11 @@
                     required
                     class="w-full px-4 py-3 rounded-xl text-white placeholder-gray-600 outline-none transition-all duration-200"
                     style="background-color: #1a1a1a; border: 1px solid #2d2d2d; color: #f0f0f0;"
-                    onfocus="this.style.borderColor='#e11d48'"
+                    onfocus="this.style.borderColor='#7c3aed'"
                     onblur="this.style.borderColor='#2d2d2d'">
 
                 @error('title')
-                    <p class="text-sm mt-2" style="color: #f87171;">{{ $message }}</p>
+                    <p class="text-sm mt-2" style="color: #c4b5fd;">{{ $message }}</p>
                 @enderror
             </div>
 
@@ -74,11 +74,11 @@
                     placeholder="Tuliskan detail tugas di sini..."
                     class="w-full px-4 py-3 rounded-xl outline-none transition-all duration-200 resize-y"
                     style="background-color: #1a1a1a; border: 1px solid #2d2d2d; color: #f0f0f0;"
-                    onfocus="this.style.borderColor='#e11d48'"
+                    onfocus="this.style.borderColor='#7c3aed'"
                     onblur="this.style.borderColor='#2d2d2d'">{{ old('description') }}</textarea>
 
                 @error('description')
-                    <p class="text-sm mt-2" style="color: #f87171;">{{ $message }}</p>
+                    <p class="text-sm mt-2" style="color: #c4b5fd;">{{ $message }}</p>
                 @enderror
             </div>
 
@@ -92,10 +92,10 @@
                             value="1"
                             @checked(old('is_completed', false))
                             class="sr-only peer">
-                        <div class="w-5 h-5 rounded flex items-center justify-center transition-all duration-150 peer-checked:glow-red-sm"
+                        <div class="w-5 h-5 rounded flex items-center justify-center transition-all duration-150"
                              style="background-color: #1a1a1a; border: 2px solid #3d3d3d;"
                              id="checkbox-visual">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 hidden" style="color: #e11d48;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" id="check-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 hidden" style="color: #7c3aed;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" id="check-icon">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
                         </div>

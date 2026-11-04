@@ -15,17 +15,17 @@
             theme: {
                 extend: {
                     colors: {
-                        crimson: {
-                            50:  '#fff1f2',
-                            100: '#ffe4e6',
-                            200: '#fecdd3',
-                            300: '#fda4af',
-                            400: '#fb7185',
-                            500: '#f43f5e',
-                            600: '#e11d48',
-                            700: '#be123c',
-                            800: '#9f1239',
-                            900: '#881337',
+                        violet: {
+                            50:  '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
                         },
                         onyx: {
                             50:  '#f6f6f6',
@@ -53,17 +53,17 @@
         body { font-family: 'Inter', sans-serif; }
 
         /* ── Glow helpers ── */
-        .glow-red    { box-shadow: 0 0 20px rgba(225, 29, 72, 0.3); }
-        .glow-red-sm { box-shadow: 0 0 10px rgba(225, 29, 72, 0.2); }
+        .glow-purple    { box-shadow: 0 0 20px rgba(109, 40, 217, 0.35); }
+        .glow-purple-sm { box-shadow: 0 0 10px rgba(109, 40, 217, 0.25); }
 
         /* ── Buttons ── */
         .btn-red {
-            background: linear-gradient(135deg, #e11d48, #be123c);
+            background: linear-gradient(135deg, #7c3aed, #5b21b6);
             transition: all 0.25s cubic-bezier(.4,0,.2,1);
         }
         .btn-red:hover {
-            background: linear-gradient(135deg, #be123c, #9f1239);
-            box-shadow: 0 0 22px rgba(225, 29, 72, 0.45);
+            background: linear-gradient(135deg, #6d28d9, #4c1d95);
+            box-shadow: 0 0 22px rgba(109, 40, 217, 0.5);
             transform: translateY(-2px) scale(1.02);
         }
         .btn-red:active { transform: translateY(0) scale(0.98); }
@@ -75,19 +75,19 @@
             transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
         }
         .card-dark:hover {
-            border-color: rgba(225, 29, 72, 0.45);
-            box-shadow: 0 0 28px rgba(225, 29, 72, 0.12), 0 8px 32px rgba(0,0,0,0.4);
+            border-color: rgba(109, 40, 217, 0.5);
+            box-shadow: 0 0 28px rgba(109, 40, 217, 0.15), 0 8px 32px rgba(0,0,0,0.4);
             transform: translateY(-2px);
         }
 
         /* ── Accent stripe ── */
         .stripe-accent {
-            background: linear-gradient(90deg, #e11d48 0%, #9f1239 100%);
+            background: linear-gradient(90deg, #7c3aed 0%, #4c1d95 100%);
         }
 
         /* ── Inputs ── */
         input:focus, textarea:focus {
-            box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2);
+            box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.25);
         }
 
         /* ── Page enter animation ── */
@@ -123,7 +123,7 @@
         .stagger-7  { animation-delay: 0.35s; }
         .stagger-8  { animation-delay: 0.40s; }
 
-        /* ── Pulsing red dot (pending status) ── */
+        /* ── Pulsing purple dot (pending status) ── */
         @keyframes ping-dot {
             0%   { transform: scale(1);   opacity: 1; }
             70%  { transform: scale(2.2); opacity: 0; }
@@ -134,15 +134,15 @@
             position: absolute;
             inset: 0;
             border-radius: 9999px;
-            background: #e11d48;
+            background: #7c3aed;
             animation: ping-dot 1.6s ease-out infinite;
         }
 
         /* ── Shimmer on navbar logo icon ── */
         @keyframes shimmer {
-            0%   { box-shadow: 0 0 6px rgba(225,29,72,0.4); }
-            50%  { box-shadow: 0 0 18px rgba(225,29,72,0.7), 0 0 32px rgba(225,29,72,0.2); }
-            100% { box-shadow: 0 0 6px rgba(225,29,72,0.4); }
+            0%   { box-shadow: 0 0 6px rgba(109,40,217,0.5); }
+            50%  { box-shadow: 0 0 18px rgba(109,40,217,0.8), 0 0 32px rgba(109,40,217,0.25); }
+            100% { box-shadow: 0 0 6px rgba(109,40,217,0.5); }
         }
         .logo-shimmer { animation: shimmer 3s ease-in-out infinite; }
 
@@ -153,7 +153,7 @@
             100% { background-position: 0% 50%; }
         }
         .stripe-anim {
-            background: linear-gradient(90deg, #e11d48, #9f1239, #f43f5e, #be123c);
+            background: linear-gradient(90deg, #7c3aed, #4c1d95, #8b5cf6, #6d28d9);
             background-size: 300% 300%;
             animation: stripeSlide 4s ease infinite;
         }
@@ -186,7 +186,7 @@
                     </svg>
                 </div>
                 <div>
-                    <span class="text-lg font-bold text-white group-hover:text-red-400 transition-colors duration-200">TodoList</span>
+                    <span class="text-lg font-bold text-white group-hover:text-purple-400 transition-colors duration-200">TodoList</span>
                     <span class="text-xs text-gray-500 block leading-none">Belajar Laravel</span>
                 </div>
             </a>

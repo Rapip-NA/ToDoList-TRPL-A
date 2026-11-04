@@ -12,7 +12,7 @@
             <a href="{{ route('todos.index') }}"
                class="inline-flex items-center gap-1.5 text-xs font-medium mb-4 transition-colors duration-150"
                style="color: #6b6b6b;"
-               onmouseover="this.style.color='#e11d48'"
+               onmouseover="this.style.color='#7c3aed'"
                onmouseout="this.style.color='#6b6b6b'">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
@@ -20,7 +20,7 @@
                 Kembali ke Daftar
             </a>
 
-            <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: #e11d48;">
+            <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: #7c3aed;">
                 Detail Tugas
             </p>
 
@@ -45,7 +45,7 @@
                 </span>
             @else
                 <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
-                      style="background-color: #1c0a0a; color: #f87171; border: 1px solid #991b1b;">
+                      style="background-color: #1e0a3c; color: #c4b5fd; border: 1px solid #5b21b6;">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
