@@ -26,9 +26,11 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /
-          # Glob patterns — prefix with ! to exclude
-          # Folders must end with /** to match contents AND the folder itself
+          protocol: ftps
+          port: 21
+          server-dir: /todolist-trpl-a/public_html/
+          timeout: 60000
+          # Glob patterns — folders must end with /** to match contents
           exclude: |
             **/.git/**
             **/.github/**
