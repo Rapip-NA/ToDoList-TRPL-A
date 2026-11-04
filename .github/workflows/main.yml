@@ -28,7 +28,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          server-dir: /todolist-trpl-a/public_html/
+          server-dir: /public_html/
           timeout: 60000
           # Glob patterns — folders must end with /** to match contents
           exclude: |
