@@ -12,30 +12,39 @@ jobs:
 
     steps:
       - name: 🛎 Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: 📂 Copy files via SFTP / SSH
-        uses: appleboy/scp-action@v0.1.7
+      - name: 🐘 Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          host: ${{ secrets.FTP_SERVER }}
+          php-version: '8.3'
+
+      - name: 📦 Install Composer dependencies
+        run: composer install --no-dev --optimize-autoloader --no-interaction
+
+      - name: 🟢 Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 🎨 Build assets
+        run: |
+          npm ci
+          npm run build
+
+      - name: 📂 Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          target: domains/todolist.rapipaja.my.id/public_html/
-          source: >-
-            app/,
-            bootstrap/app.php,
-            bootstrap/providers.php,
-            config/,
-            database/migrations/,
-            database/seeders/,
-            database/factories/,
-            public/,
-            resources/,
-            routes/,
-            artisan,
-            composer.json,
-            composer.lock,
-            package.json
-          strip_components: 0
-          overwrite: true
+          protocol: ftp
+          port: 21
+          server-dir: domains/todolist.rapipaja.my.id/public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .env
+            storage/**
+            tests/**
