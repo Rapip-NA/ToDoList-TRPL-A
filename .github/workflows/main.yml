@@ -39,10 +39,6 @@ jobs:
           server-dir: ./domains/todolist.rapipaja.my.id/public_html/
           timeout: 60000
           dangerous-clean-slate: false
-          server-dir: /public_html/
-          timeout: 60000
-          dangerous-clean-slate: false
-          # Glob patterns — folders must end with /** to match contents
           exclude: |
             **/.git/**
             **/.github/**
