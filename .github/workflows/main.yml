@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          server-dir: domains/todolist.rapipaja.my.id/public_html/
+          server-dir: /public_html/
           exclude: |
             **/.git*
             **/.git*/**
